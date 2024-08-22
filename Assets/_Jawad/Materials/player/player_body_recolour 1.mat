@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: player_body_recolour 1
+  m_Shader: {fileID: 4800000, guid: f8d49205b3b0a644195633020367689d, type: 3}
+  m_ShaderKeywords: TCP2_DISABLE_WRAPPED_LIGHT _EMISSION
+  m_LightmapFlags: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BRDFTex:
+        m_Texture: {fileID: 2800000, guid: 882eadfeb4d499a43a539ed08c5d8575, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpTex:
+        m_Texture: {fileID: 2800000, guid: fdc6d3a2c8b7b4046908a6694aebd316, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 2800000, guid: 4bb93e862ca90ec4c8ab46fd798242ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 4bb93e862ca90ec4c8ab46fd798242ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OverlayTex:
+        m_Texture: {fileID: 2800000, guid: 86e3041b945818746b4979964ff167ca, type: 3}
+        m_Scale: {x: 1.428035, y: 1.341964}
+        m_Offset: {x: -0.166, y: 0.67}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ramp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RampSmooth: 0.58
+    - _RampSmoothAdd: 0.75
+    - _RampThreshold: 0.5
+    - _RimMax: 0.85
+    - _RimMin: 0.6
+    - _RimStrength: 0.5
+    - _Shininess: 0.059
+    - _SmoothnessTextureChannel: 0
+    - _SpecBlend: 1
+    - _SpecSmooth: 1
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _TCP2_DISABLE_WRAPPED_LIGHT: 1
+    - _TCP2_RAMPTEXT: 0
+    - _TCP2_SPEC_TOON: 0
+    - _TCP2_STYLIZED_FRESNEL: 0
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorSwapG: {r: 1, g: 0, b: 0, a: 1}
+    - _ColorSwapR: {r: 0, g: 1, b: 0, a: 1}
+    - _EmissionColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+    - _HColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OverlayBST: {r: 2.031102, g: 1.851852, b: -0.72, a: -0.41}
+    - _RemapOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _RemapZone: {r: 0.6049805, g: 0.0009765, b: 0.6777344, a: 0.0693359}
+    - _RemapZone1: {r: 0.0074219, g: 0.9306641, b: 0.08544922, a: 0.9990234}
+    - _RemapZone2: {r: 0.6791992, g: 0.9306641, b: 0.753418, a: 0.9990234}
+    - _RemapZoneA: {r: 0.8103125, g: 0.877461, b: 0.9418359, a: 0.9892188}
+    - _RemapZoneB: {r: 0.3497266, g: 0.9442578, b: 0.480625, a: 0.9858203}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.6}
+    - _SColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 1}
+  m_BuildTextureStacks: []

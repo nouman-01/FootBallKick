@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8581643651604305387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8581643651604305389}
+  - component: {fileID: 8581643651604305386}
+  m_Layer: 0
+  m_Name: ShopManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8581643651604305389
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581643651604305387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8581643651604305386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581643651604305387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79c525ec42587c04d9bac13a63de5320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 0}
+  Kit:
+  - {fileID: 2800000, guid: 4f69c23a17d12fa49ba4fd082dccb76b, type: 3}
+  - {fileID: 2800000, guid: 26214ad15971fd7459f8b656faea9ab3, type: 3}
+  - {fileID: 2800000, guid: 195ff72adb9cbef4fae2ec6ffc04fb6f, type: 3}
+  - {fileID: 2800000, guid: 26324afb81a8c7945bb9524e109e9b85, type: 3}
+  - {fileID: 2800000, guid: f1ea5ed430f6d824bb21dac1c46d8c4b, type: 3}
+  - {fileID: 2800000, guid: d5bf8c63349b8344baa6dd3221317476, type: 3}
+  Puck:
+  - {fileID: 2800000, guid: 31c8418db1844294b8bd87d21940340a, type: 3}
+  - {fileID: 2800000, guid: 316da52d3388c4a48ad379bced58a971, type: 3}
+  - {fileID: 2800000, guid: e8ad2f8225cd92440af3a7436cc7ee8d, type: 3}
+  - {fileID: 2800000, guid: ff1af347ec7fc714e8605e514f985b70, type: 3}
+  - {fileID: 2800000, guid: ba04dc1184a6f4c4f8715cda6269841e, type: 3}
+  - {fileID: 2800000, guid: 9c4c73e5541b72b4db42e189adea6ff7, type: 3}
+  Hockey:
+  - {fileID: 2800000, guid: 88f007d79df64a94c9d8a1871f2f5183, type: 3}
+  - {fileID: 2800000, guid: 5764521bfcd883540a472d02891a7330, type: 3}
+  - {fileID: 2800000, guid: a6ba171553449b64ca05f363930c6132, type: 3}
+  - {fileID: 2800000, guid: b20fce47536cabf46810a1c3e258db0f, type: 3}
+  - {fileID: 2800000, guid: 7584d883ad9d1084c8cebb05dcc14c10, type: 3}
+  - {fileID: 2800000, guid: 39f2cfb099cb4d74c88017d045cb9d1f, type: 3}
+  Current_Items: 0
+  Slection:
+  - Slected_Btn: {fileID: 0}
+    Slected_panel: {fileID: 0}
+    Cam: {fileID: 0}
+    ShopMat: {fileID: 0}
+  - Slected_Btn: {fileID: 0}
+    Slected_panel: {fileID: 0}
+    Cam: {fileID: 0}
+    ShopMat: {fileID: 0}
+  - Slected_Btn: {fileID: 0}
+    Slected_panel: {fileID: 0}
+    Cam: {fileID: 0}
+    ShopMat: {fileID: 0}
+  ItemsMats:
+  - Puck_Mat: {fileID: 2100000, guid: c171cafdc0f6c724ba90ab2a74021d62, type: 2}
+    Hockey_Mat: {fileID: 2100000, guid: 15436f629a948dd40abe43ba21ee724a, type: 2}
+    Kit_Mat: {fileID: 2100000, guid: d350282e49374a547bb96512de759209, type: 2}
+    Helmat: {fileID: 2100000, guid: 5acb0573c356bb749ba33749adfe0229, type: 2}
+  Shop_playerMats:
+  - ShopPuck_Mat: {fileID: 2100000, guid: e8fdd11801049f947a4cb6c68fe97aa0, type: 2}
+    Shop_Hockey_Mat: {fileID: 2100000, guid: edcb8db0da8201448adebd1bd246d4e2, type: 2}
+    Shop_Kit_Mat: {fileID: 2100000, guid: 95ffe870f944b6a4e82fa84ce8bc131f, type: 2}
+    Shop_Helmat: {fileID: 2100000, guid: bdfeb1d51d7e9e04994e5eddb42849ae, type: 2}
+  Shop_Mat: {fileID: 0}

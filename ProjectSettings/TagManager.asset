@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - discreate
+  - Goal
+  - GoalKeeper
+  - GoalText
+  - breakable
+  - Stick
+  - Puck
+  - Portal
+  - box
+  - Ball
+  - Objects
+  - Scndplayer
+  - GoalHitTargets
+  - SnowMan
+  - MoveKeeper
+  - wall
+  - key
+  - Tree
+  - Obs
+  - Coin
+  - Goalwall
+  - Enemy
+  - RotatorEnemy
+  - StaticKeeper
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - GoalHitTargets
+  - puck
+  - bottles
+  - Shop
+  - Arrow
+  - Goal
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
