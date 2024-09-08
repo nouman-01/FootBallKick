@@ -28,6 +28,7 @@ TagManager:
   - Enemy
   - RotatorEnemy
   - StaticKeeper
+  - Enemy1
   layers:
   - Default
   - TransparentFX

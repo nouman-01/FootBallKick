@@ -7,7 +7,7 @@ public class Anim : MonoBehaviour
     
     private void Start()
     {
-       int RandomNo= Random.Range(1, 4);
+       int RandomNo= Random.Range(1, 3);
         if (RandomNo == 1)
         {
             GetComponent<Animator>().SetTrigger("D1");

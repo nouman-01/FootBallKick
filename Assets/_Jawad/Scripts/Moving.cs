@@ -11,7 +11,10 @@ public class Moving : MonoBehaviour
     Vector3 Nextpos;
     public float objectspeed;
     public bool isMove = false/*,IsX_axis=true*/;
+
     public Animator Anim;
+    public Animator Animdye;
+
     private void Start()
     {
         Nextpos =new Vector3( positions[0],transform.position.y,transform.position.z);
@@ -48,6 +51,7 @@ public class Moving : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, Nextpos, objectspeed * Time.deltaTime);
         }
     }
+
     //[SerializeField] float Speed;
     //public float Area=5;
     //// Start is called before the first frame update

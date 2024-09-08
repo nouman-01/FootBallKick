@@ -187,12 +187,19 @@ public class Puck : MonoBehaviour
             if (collision.transform.GetComponent<DOTweenAnimation>())
             {
                 collision.transform.GetComponent<DOTweenAnimation>().DOPause();
-                collision.transform.GetChild(0).GetComponent<Animator>().enabled=false;
+              //  collision.transform.GetChild(1).GetComponent<Animator>().enabled = true;
+                collision.transform.GetChild(0).transform.GetChild(0).GetComponent<Animator>().enabled = true;
+                collision.transform.GetChild(0).GetComponent<Animator>().enabled = false;
+
+                //collision.transform.GetComponent<DOTweenAnimation>().GetComponent<Animator>().enabled = false;
+                Debug.LogError("collide");
             }
+
             if (collision.transform.GetComponent<Moving>()) 
             { 
             collision.transform.GetComponent<Moving>().isMove = false;
-            collision.transform.GetComponent<Moving>().Anim.enabled=false;
+                collision.transform.GetComponent<Moving>().Animdye.enabled = true;
+                 collision.transform.GetComponent<Moving>().Anim.enabled=false;
             }
             collision.gameObject.tag = "Untagged";
             isHit = true;
@@ -237,11 +244,27 @@ public class Puck : MonoBehaviour
             {
                 collision.transform.GetComponent<DOTweenAnimation>().DOPause();
             }
+            collision.transform.GetChild(0).transform.GetChild(0).GetComponent<Animator>().enabled = true;
+
             collision.transform.GetChild(0).GetComponent<Animator>().enabled = false;
             collision.gameObject.tag = "Untagged";
             isHit = true;
             Directional_force(collision);
         }
+        if (collision.gameObject.tag == "Enemy1" && !Iswin)
+        {
+            if (collision.transform.GetComponent<OrbitAroundTree>())
+            {
+                collision.transform.GetComponent<OrbitAroundTree>().isRotate=false;
+            }
+            collision.transform.GetChild(0).transform.GetChild(0).GetComponent<Animator>().enabled = true;
+
+            collision.transform.GetChild(0).GetComponent<Animator>().enabled = false;
+            collision.gameObject.tag = "Untagged";
+            isHit = true;
+            Directional_force(collision);
+        }
+
 
         if (collision.gameObject.tag == "RotatorEnemy" && !Iswin)
         {

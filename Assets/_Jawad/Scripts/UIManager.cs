@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
     CinemachineBrain cinemachine;
     public GameObject StartScreen,Keys_Parent,ShopBtn,BonousScreen;
     public Transform Bonous_Parent;
-    public GameObject InGameScreen, LevelfailScreen, LevelWinScreen, SettingScreen, ShopScreen, LoadingScreen, RateusScreen, RewardScreen;
+    public GameObject InGameScreen, LevelfailScreen, LevelWinScreen, SettingScreen, ShopScreen, LoadingScreen, RateusScreen, RewardScreen,PauseScreen,MainScrenn,exitScreen;
     [SerializeField]
     GameObject Shop_Objects;
     public Image FadeImge;
@@ -34,8 +34,29 @@ public class UIManager : MonoBehaviour
     {
         current_Keys();
         cinemachine = Camera.main.GetComponent<CinemachineBrain>();
-    }
+        if (PlayerPrefs.GetInt("MM") == 0)
+        {
+            MainScrenn.SetActive(true);
+        }
+        else
+        {
+            MainScrenn.SetActive(false);
 
+        }
+    }
+    public void Exitbtn()
+    {
+        exitScreen.SetActive(true);
+    }
+    public void ExitbtnNo()
+    {
+        exitScreen.SetActive(false);
+    }
+    public void ExitbtnYes()
+    {
+        Application.Quit();
+     //   exitScreen.SetActive(false);
+    }
     public void ShowStartscreen()
     {
         
@@ -51,8 +72,10 @@ public class UIManager : MonoBehaviour
         DisableScreens();
         EnableScreen(StartScreen);
         EnableScreen(InGameScreen);
+        MainScrenn.SetActive(true);
         StartCoroutine(CameraSpeed());
     }
+
     public void ShowIngameScreen()
     {
         DisableScreens();
@@ -69,6 +92,7 @@ public class UIManager : MonoBehaviour
         EnableScreen(BonousScreen);
         
     }
+    
     public void ShowSettingScreen()
     {
       
@@ -94,12 +118,13 @@ public class UIManager : MonoBehaviour
         DisableScreens();
         EnableScreen(ShopScreen);
         StartCoroutine(CameraSpeed());
-    } 
+    }
     public void ShowRateusScreen()
     {
         DisableScreens();
         EnableScreen(RateusScreen);
     }
+    
     public IEnumerator ShowwinScreen()
     {
         HapticControllerNew.instance.PlayHaptic(MoreMountains.NiceVibrations.HapticTypes.Success);
@@ -138,12 +163,39 @@ public class UIManager : MonoBehaviour
         DisableScreen(RateusScreen);
         DisableScreen(LevelfailScreen);
         DisableScreen(LevelWinScreen);
+        DisableScreen(PauseScreen);
     }
 
+    public void pauseBtn()
+    {
+        PauseScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
+    public void resumeBtn()
+    {
+        PauseScreen.SetActive(false);
+        Time.timeScale = 1f;
+    }
+    public void HomeBtn()
+    {
+        MainScrenn.SetActive(true);
+        DisableScreens();
+        Time.timeScale = 1f;
+        PlayerPrefs.SetInt("MM", 0);
+
+    }
+    public void playbtn()
+    {
+        MainScrenn.SetActive(false);
+        PlayerPrefs.SetInt("MM", 1);
+
+    }
     public void OnClickRestartLevelBtn()
     {
         AudioManager.Instance.PlayButtonClickSound();
         PlayerController.instance.RestartLevel();
+        PlayerPrefs.SetInt("MM", 1);
+
     }
     public void OnClickContinueToNextLevelBtn()
     {
@@ -232,6 +284,10 @@ public class UIManager : MonoBehaviour
             //int indx = Random.Range(0, Sad_ImgParent.transform.childCount - 1);
             //Sad_ImgParent.transform.GetChild(indx).GetComponent<DOTweenAnimation>().DORestart();
         }
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("MM", 0);
     }
     void current_Keys()
     {

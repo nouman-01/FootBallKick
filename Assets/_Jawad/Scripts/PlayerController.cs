@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
         }
 
     }
+    //life always at work
     public void PauseGame()
     {
         //Time.timeScale = 0;

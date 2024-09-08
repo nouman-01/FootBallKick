@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Yes Levels Again Here");
             PlayerPrefs.SetInt("Level", 0); //4
         }
-
+        //Debug.LogError("genetare levelsss");
         if (GameObject.Find(HolderName))
         {
             DestroyImmediate(GameObject.Find(HolderName));
