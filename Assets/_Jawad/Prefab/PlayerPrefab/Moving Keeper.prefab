@@ -1235,6 +1235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3030097676516315861}
   - component: {fileID: 6627583952994720611}
+  - component: {fileID: 4749720605749747160}
   m_Layer: 0
   m_Name: HockeyKeeperComplete pot
   m_TagString: Untagged
@@ -1284,7 +1285,7 @@ Animator:
   m_GameObject: {fileID: 3033489012017030063}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8bf6d77d3f8058140bed9396e455ad86, type: 3}
-  m_Controller: {fileID: 9100000, guid: 61f740d1cd16bc949b5f46e7da86e111, type: 2}
+  m_Controller: {fileID: 9100000, guid: cd7119a2148ea0f43a85de728e735f68, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1295,6 +1296,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4749720605749747160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3033489012017030063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a080301e94dc4a24f9940a17d4991f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3033509564983466246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,12 +4290,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f142001b58ca3a4498f803980a484d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  positions:
-  - 0
-  - 0
+  positions: []
   Moveposindx: 0
   objectspeed: 4
-  isMove: 1
+  isMove: 0
   Anim: {fileID: 6627583952994720611}
   Animdye: {fileID: 5509656812836645617}
 --- !u!1001 &4817569658144139771

@@ -17,7 +17,7 @@ public class Moving : MonoBehaviour
 
     private void Start()
     {
-        Nextpos =new Vector3( positions[0],transform.position.y,transform.position.z);
+       // Nextpos =new Vector3( positions[0],transform.position.y,transform.position.z);
     }
     private void Update()
     {

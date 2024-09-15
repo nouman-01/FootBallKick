@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
    
         UIManager.Instance.Keys_Parent.gameObject.SetActive(false);
-        IsMap = true;
+       // IsMap = true;
         uIManager.ShowStartscreen();
         isStart = false;
         if (PlayerPrefs.GetInt("Level") == TotalLevel)

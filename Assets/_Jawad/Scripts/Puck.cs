@@ -10,6 +10,8 @@ public class Puck : MonoBehaviour
     public bool IsBonous = false; bool isHit = false,Isgamestart=false;
     public static Puck instance;
     public Animator GoalKeeperAnim;
+    public Animator BallAnim;
+
     public string KeeperAnim_positionName;
     Vector3 lastVelocity;
     [SerializeField]
@@ -82,12 +84,18 @@ public class Puck : MonoBehaviour
                     transform.localPosition = newpos;
                     lastVelocity = transform.localPosition;
                     float Dis = Vector3.Distance(transform.localPosition, destination);
+                   // BallAnim.enabled = true;
+                    Debug.LogError("ball hit");
+
+                    //Vector3 rotationDirection = Vector3.Cross(transform.forward, Vector3.up); // Adjust direction as needed
+                    //rb.AddTorque(rotationDirection * lastVelocity.magnitude * 50f, ForceMode.Acceleration);
+
                     if (Dis <= 0.05f)
                     {
                         if (index < Positions.Length - 1)
                         {
                             index++;
-                            if (index == Goal_indx && GoalKeeperAnim!=null)
+                            if (index == Goal_indx && GoalKeeperAnim != null)
                             {
                                 KeeperAnim();
                             }
@@ -98,18 +106,65 @@ public class Puck : MonoBehaviour
                             {
                                 puck = false;
                                 transform.rotation = Arrows_Parent.GetChild(Arrows_Parent.childCount - 3).transform.rotation;
-                                rb.AddForce(transform.forward */*lastVelocity.magnitude*/2500, ForceMode.Acceleration);
+                              // BallAnim.enabled = false;
+
+                                // Apply force to the ball
+                                rb.AddForce(transform.forward * 2500, ForceMode.Acceleration);
+
+                                // Apply rotation (torque) for the ball to spin
+                                Vector3 rotationDirection = Vector3.Cross(transform.forward, Vector3.up); // Adjust direction as needed
+                                rb.AddTorque(rotationDirection * lastVelocity.magnitude * 50f, ForceMode.Acceleration);
                             }
                             else
                             {
-
+                                // Handle second player case
                             }
                         }
                     }
-                }
+                
+
+
+
             }
-         
-        
+
+
+            //old code
+            //if (puck)
+            //{
+            //    Vector3 destination = Positions[index];
+            //    Vector3 newpos = Vector3.MoveTowards(transform.localPosition, destination, speed);
+            //    transform.localPosition = newpos;
+            //    lastVelocity = transform.localPosition;
+            //    float Dis = Vector3.Distance(transform.localPosition, destination);
+            //    Debug.LogError("ball hit");
+            //    if (Dis <= 0.05f)
+            //    {
+            //        if (index < Positions.Length - 1)
+            //        {
+            //            index++;
+            //            if (index == Goal_indx && GoalKeeperAnim!=null)
+            //            {
+            //                KeeperAnim();
+            //            }
+            //        }
+            //        else
+            //        {
+            //            if (!LevelManager.instance.isScndplayer)
+            //            {
+            //                puck = false;
+            //                transform.rotation = Arrows_Parent.GetChild(Arrows_Parent.childCount - 3).transform.rotation;
+            //                rb.AddForce(transform.forward */*lastVelocity.magnitude*/2500, ForceMode.Acceleration);
+            //            }
+            //            else
+            //            {
+
+            //            }
+            //        }
+            //    }
+            //}
+        }
+
+
             if (Input.GetMouseButtonUp(0)&& Isgamestart)
             {
             isControl = false;

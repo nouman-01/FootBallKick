@@ -11,9 +11,9 @@ public class ShopManager : MonoBehaviour
 
    
 
-    public Material[] Kit_Mat, Helmet_Mat, puck_Mat, Hockey_Mat;
-    public SkinnedMeshRenderer ShopHelmat, ShopKit;
-    public MeshRenderer ShopPuck, ShopHockey;
+    public GameObject[] Kit_Mat, Helmet_Mat, puck_Mat, Hockey_Mat;
+    public GameObject ShopHelmat, ShopKit;
+    public GameObject ShopPuck, ShopHockey;
     public Enventory_Manager[] Envetory;
 
 
@@ -35,7 +35,15 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
 
-      UIManager.Instance.Cash_text.text = ((int)PlayerPrefs.GetFloat("Cash")).ToString();
+        UIManager.Instance.Cash_text.text = ((int)PlayerPrefs.GetFloat("Cash")).ToString();
+        ShopPuck = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
+        ShopKit = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
+        ShopHockey = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
+        ShopHockey.SetActive(true);
+        ShopKit.SetActive(true);
+        // ShopPuck.SetActive(false);
+        ShopPuck.SetActive(true);
+
     }
     [System.Serializable]
     public class SlectionInfo
@@ -68,6 +76,7 @@ public class ShopManager : MonoBehaviour
                 Shop_Mat = Slection[i].ShopMat; /*1375f*/
                 Slection[i].Slected_Btn.DOLocalMoveY(131f, 0.2f).SetEase(Ease.Linear);
                 Slection[i].Slected_Btn.GetChild(1).gameObject.SetActive(true);
+                Debug.LogError("select puckk");
             }
             else
             {
@@ -76,6 +85,8 @@ public class ShopManager : MonoBehaviour
                 DisableScreen(Slection[i].Cam.gameObject);
                 Slection[i].Slected_Btn.DOLocalMoveY(114f, 0.2f).SetEase(Ease.Linear);
                 Slection[i].Slected_Btn.GetChild(1).gameObject.SetActive(false);
+                Debug.LogError("select Slection");
+
             }
         }
 
@@ -96,10 +107,11 @@ public class ShopManager : MonoBehaviour
         
         if (isShop)
         {
-            ShopKit.material = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
-            ShopHelmat.material = Helmet_Mat[PlayerPrefs.GetInt("ShopShirt")];
-            ShopHockey.material = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
-            ShopPuck.material = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
+            ShopKit = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
+            ShopHelmat = Helmet_Mat[PlayerPrefs.GetInt("ShopShirt")];
+            ShopHockey = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
+            ShopPuck = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
+
         }
         else
         {
@@ -110,10 +122,12 @@ public class ShopManager : MonoBehaviour
             PlayerPrefs.SetInt("ShopShirt", PlayerPrefs.GetInt("Shirt"));
             PlayerPrefs.SetInt("ShopStick", PlayerPrefs.GetInt("Stick"));
             PlayerPrefs.SetInt("ShopPuck", PlayerPrefs.GetInt("Puck"));
-            ShopKit.material = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
-            ShopHelmat.material = Helmet_Mat[PlayerPrefs.GetInt("ShopShirt")];
-            ShopHockey.material = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
-            ShopPuck.material = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
+            ShopKit = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
+            ShopHelmat = Helmet_Mat[PlayerPrefs.GetInt("ShopShirt")];
+            ShopHockey = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
+            ShopPuck = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
+           // ShopPuck.SetActive(false);
+           
         }
     }
     // Dumy For cash Increasing ----------------------------------------------

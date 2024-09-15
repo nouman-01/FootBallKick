@@ -7428,6 +7428,14 @@ PrefabInstance:
       value: -21.6
       objectReference: {fileID: 0}
     - target: {fileID: 4770798414248417729, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
+      propertyPath: Kit
+      value: 
+      objectReference: {fileID: 9163140857661622998}
+    - target: {fileID: 4770798414248417729, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
+      propertyPath: Puck
+      value: 
+      objectReference: {fileID: 6445914542312428454}
+    - target: {fileID: 4770798414248417729, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -7451,6 +7459,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537260b9ba287444981bcb449b75f69f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6445914542312428454 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 772613071449132683, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
+  m_PrefabInstance: {fileID: 6038379739696209197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7475206547681197052 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3779055406093182673, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
@@ -7470,6 +7483,11 @@ MonoBehaviour:
 --- !u!4 &8939338476690831125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3441395091449670200, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
+  m_PrefabInstance: {fileID: 6038379739696209197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9163140857661622998 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3235456376579299323, guid: af91a2a598fafe841a5798645c9b197f, type: 3}
   m_PrefabInstance: {fileID: 6038379739696209197}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6038379739770109362

@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     public bool Isbonospuck = false;
     // Start is called before the first frame update
     //public Transform PuckParent,HockeyParent,HelmatParent,KitParent;
-    public SkinnedMeshRenderer Helmat, Kit;
-    public MeshRenderer Hockey, Puck;
+    public GameObject Helmat, Kit;
+    public GameObject Hockey, Puck;
 
 
     public static PlayerController instance;
@@ -98,9 +98,9 @@ public class PlayerController : MonoBehaviour
     }
     public   void ShopObj()
     {
-        Kit.material=     ShopManager.instance.Kit_Mat[PlayerPrefs.GetInt("Shirt")];
-        Helmat.material= ShopManager.instance.Helmet_Mat[PlayerPrefs.GetInt("Shirt")];
-        Hockey.material = ShopManager.instance.Hockey_Mat[PlayerPrefs.GetInt("Stick")];
-        Puck.material = ShopManager.instance.puck_Mat[PlayerPrefs.GetInt("Puck")];
+        Kit=     ShopManager.instance.Kit_Mat[PlayerPrefs.GetInt("Shirt")];
+        Helmat= ShopManager.instance.Helmet_Mat[PlayerPrefs.GetInt("Shirt")];
+        Hockey = ShopManager.instance.Hockey_Mat[PlayerPrefs.GetInt("Stick")];
+        Puck = ShopManager.instance.puck_Mat[PlayerPrefs.GetInt("Puck")];
     }
 }
