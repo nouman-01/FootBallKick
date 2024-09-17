@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &550360458067206017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3661082807005355874}
+  - component: {fileID: 8163199903835792112}
+  - component: {fileID: 2743778872987018486}
+  m_Layer: 0
+  m_Name: Admanager live ads
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3661082807005355874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550360458067206017}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6398597, y: 3.0828438, z: 3.638474}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8163199903835792112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550360458067206017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ffcff5c7f604c43858e6fce84a9d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeAllAds: 0
+  AdmobPriorityInter: 1
+  AdmobPriorityRewarded: 1
+  ReviveVideoWatched: 0
+  AppID: ca-app-pub-5414453136630169-1228994877
+  bannerAdId1: ca-app-pub-5414453136630169/8181416034
+  bannerAdId2: ca-app-pub-5414453136630169/8181416034
+  bannerAdId3: ca-app-pub-5414453136630169/8181416034
+  bannerAdId4: ca-app-pub-5414453136630169/2062692253
+  bannerAdId5: ca-app-pub-5414453136630169/2062692253
+  InterstitialAdID: ca-app-pub-5414453136630169/6289749863
+  rewarded_Ad_ID: ca-app-pub-5414453136630169/3333771275
+  BannerIsLoaded: 0
+  boxbannerpos: 6
+  isInitialized: 0
+  NextFunc: 0
+--- !u!114 &2743778872987018486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550360458067206017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5cf9f3240568c42933ad5462936d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

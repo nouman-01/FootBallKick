@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+//using static ToonyColorsPro.ShaderGenerator.Enums;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class GameManager : MonoBehaviour
     public int TotalLevel;
     public bool IsMap = false;
     int lvlnumber;
+
+    public static bool isRevive = false;
+    public static int revive_Index = 0;
 
     public enum GameState
     {
@@ -83,6 +87,32 @@ public class GameManager : MonoBehaviour
         if (IsBonous)
         {
             
+        }
+
+        Debug.Log(revive_Index + "Is my Revive index");
+
+        if (isRevive)
+        {
+            if (revive_Index != 0)
+            {
+                Puck.instance.Iswin = true;
+                if (GameManager.instance.gameState == GameManager.GameState.play)
+                {
+                    LevelManager.instance.IsGoal = true;
+                    UIManager.Instance.Gate_Imges(true);
+
+                    StopAllCoroutines();
+
+                    GameManager.instance.gameState = GameManager.GameState.completed;
+                    StartCoroutine(LevelManager.instance.MyNextLevel(revive_Index - 1));
+
+                }
+            }
+            isRevive = false;
+        }
+        else
+        {
+            revive_Index = 0;
         }
     }
     public void StartGame()

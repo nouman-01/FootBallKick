@@ -10188,7 +10188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WATCH VIDEO TO GET SKIN REWARDS
+  m_Text: WATCH VIDEO TO GET RANDOM SKIN REWARDS
 --- !u!222 &339659445
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28661,79 +28661,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049115952}
   m_CullTransparentMesh: 1
---- !u!1 &1053793890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1053793893}
-  - component: {fileID: 1053793892}
-  - component: {fileID: 1053793891}
-  m_Layer: 0
-  m_Name: Admanager live ads
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1053793891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793890}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5cf9f3240568c42933ad5462936d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1053793892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793890}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ffcff5c7f604c43858e6fce84a9d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  removeAllAds: 0
-  AdmobPriorityInter: 1
-  AdmobPriorityRewarded: 1
-  ReviveVideoWatched: 0
-  AppID: ca-app-pub-5414453136630169-1228994877
-  bannerAdId1: ca-app-pub-5414453136630169/8181416034
-  bannerAdId2: ca-app-pub-5414453136630169/8181416034
-  bannerAdId3: ca-app-pub-5414453136630169/8181416034
-  bannerAdId4: ca-app-pub-5414453136630169/2062692253
-  bannerAdId5: ca-app-pub-5414453136630169/2062692253
-  InterstitialAdID: ca-app-pub-5414453136630169/6289749863
-  rewarded_Ad_ID: ca-app-pub-5414453136630169/3333771275
-  BannerIsLoaded: 0
-  boxbannerpos: 6
-  isInitialized: 0
-  NextFunc: 0
---- !u!4 &1053793893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1053793890}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6398597, y: 3.0828438, z: 3.638474}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1058210722
 GameObject:
   m_ObjectHideFlags: 0
@@ -33459,79 +33386,6 @@ Transform:
   - {fileID: 185893225}
   m_Father: {fileID: 1949841439}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1204615461
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1204615464}
-  - component: {fileID: 1204615463}
-  - component: {fileID: 1204615462}
-  m_Layer: 0
-  m_Name: Admanager tesst ads (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1204615462
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204615461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc5cf9f3240568c42933ad5462936d58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1204615463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204615461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ffcff5c7f604c43858e6fce84a9d29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  removeAllAds: 0
-  AdmobPriorityInter: 1
-  AdmobPriorityRewarded: 1
-  ReviveVideoWatched: 0
-  AppID: ca-app-pub-3940256099942544~3347511713
-  bannerAdId1: ca-app-pub-3940256099942544/6300978111
-  bannerAdId2: ca-app-pub-3940256099942544/6300978111
-  bannerAdId3: ca-app-pub-3940256099942544/6300978111
-  bannerAdId4: ca-app-pub-3940256099942544/6300978111
-  bannerAdId5: ca-app-pub-3940256099942544/6300978111
-  InterstitialAdID: ca-app-pub-3940256099942544/1033173712
-  rewarded_Ad_ID: ca-app-pub-5414453136630169/3333771274
-  BannerIsLoaded: 0
-  boxbannerpos: 6
-  isInitialized: 0
-  NextFunc: 0
---- !u!4 &1204615464
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204615461}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6398597, y: 3.0828438, z: 3.638474}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208648269
 GameObject:
   m_ObjectHideFlags: 0
@@ -35384,6 +35238,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317091734}
   m_CullTransparentMesh: 1
+--- !u!1001 &1327688395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 550360458067206017, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_Name
+      value: Admanager live ads
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743778872987018486, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.6398597
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.0828438
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.638474
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3661082807005355874, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163199903835792112, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: AppID
+      value: ca-app-pub-5414453136630169~1228994877
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163199903835792112, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8163199903835792112, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
+      propertyPath: rewarded_Ad_ID
+      value: ca-app-pub-5414453136630169/3333771274
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 40a6357b4f732174290fa94afa5b2097, type: 3}
 --- !u!1 &1329206733
 GameObject:
   m_ObjectHideFlags: 0
@@ -106425,6 +106352,5 @@ SceneRoots:
   - {fileID: 743916139}
   - {fileID: 7007594796940897253}
   - {fileID: 1740879495}
-  - {fileID: 1053793893}
-  - {fileID: 1204615464}
   - {fileID: 3393580011742284125}
+  - {fileID: 1327688395}

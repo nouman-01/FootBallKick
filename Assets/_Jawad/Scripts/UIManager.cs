@@ -259,14 +259,18 @@ public class UIManager : MonoBehaviour
     }
     public void showReviveViedo()
     {
-        admanager.instance.ShowRewardedVideAdGeneric(revive_btn);
+        //StartCoroutine(LevelManager.instance.Move_Next());
+
+
+         admanager.instance.ShowRewardedVideAdGeneric(revive_btn);
     }
 
     void revive_btn()
     {
 
-        RevivePannel.SetActive(false);
+        GameManager.isRevive = true;
         GameManager.instance.RestartGame();
+        RevivePannel.SetActive(false);
     }
 
     public void DisableScreens()
