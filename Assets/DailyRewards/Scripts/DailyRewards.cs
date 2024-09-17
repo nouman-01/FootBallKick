@@ -150,7 +150,7 @@ namespace NiobiumStudios
 
                 Debug.Log("ID " + instanceId + " Reward [" + rewards[availableReward - 1] + "] Claimed!");
                 PlayerPrefs.SetInt(GetLastRewardKey(), availableReward);
-                PlayerPrefs.SetFloat("Wolletcash", 3);
+                PlayerPrefs.SetInt("Wolletcash", 3);
                UIManager.Instance.dailyReward();
 
                 // Remove seconds

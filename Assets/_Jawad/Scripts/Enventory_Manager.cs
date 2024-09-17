@@ -80,9 +80,9 @@ public class Enventory_Manager : MonoBehaviour
         if (PlayerPrefs.GetInt(Items[CurrentBtn_indx].Button.name) == 0)
         {
             Debug.Log(Items[CurrentBtn_indx].Price + "Items Price Bug");
-            if (PlayerPrefs.GetFloat("Cash") >= Items[CurrentBtn_indx].Price)
+            if (PlayerPrefs.GetInt("Cash") >= Items[CurrentBtn_indx].Price)
             {
-                Debug.Log(PlayerPrefs.GetFloat("Cash") + "Cash Bug");
+                Debug.Log(PlayerPrefs.GetInt("Cash") + "Cash Bug");
                 PurchaseBtn.SetActive(true);
                 PurchaseBtn1.SetActive(false);
                 PurchaseBtn.GetComponent<Button>().interactable = true;
@@ -91,9 +91,9 @@ public class Enventory_Manager : MonoBehaviour
             else if (PlayerPrefs.GetInt(Items[CurrentBtn_indx].Button.name) == 0)
             {
                 Debug.Log(Items[CurrentBtn_indx].Price + "Items Price Bug");
-                if (PlayerPrefs.GetFloat("Cash") <=Items[CurrentBtn_indx].Price)
+                if (PlayerPrefs.GetInt("Cash") <=Items[CurrentBtn_indx].Price)
                 {
-                    Debug.LogError("wokkkk" + PlayerPrefs.GetFloat("Cash") + "Cash Bug");
+                    Debug.LogError("wokkkk" + PlayerPrefs.GetInt("Cash") + "Cash Bug");
                     PurchaseBtn1.SetActive(true);
                     PurchaseBtn.SetActive(false);
                     PurchaseBtn.GetComponent<Button>().interactable = false;
@@ -120,7 +120,7 @@ public class Enventory_Manager : MonoBehaviour
     }
     public void Purchase_Item()
     {
-            Debug.LogError(PlayerPrefs.GetFloat("Cash") + "Cash Bug");
+            Debug.LogError(PlayerPrefs.GetInt("Cash") + "Cash Bug");
 
 
             shopManager.Update_Cash(Items[indx].Price);

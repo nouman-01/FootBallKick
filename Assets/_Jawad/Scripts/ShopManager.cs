@@ -35,7 +35,7 @@ public class ShopManager : MonoBehaviour
     private void Start()
     {
 
-        UIManager.Instance.Cash_text.text = ((int)PlayerPrefs.GetFloat("Cash")).ToString();
+        UIManager.Instance.Cash_text.text = PlayerPrefs.GetInt("Cash").ToString();
         ShopPuck = puck_Mat[PlayerPrefs.GetInt("ShopPuck")];
         ShopKit = Kit_Mat[PlayerPrefs.GetInt("ShopShirt")];
         ShopHockey = Hockey_Mat[PlayerPrefs.GetInt("ShopStick")];
@@ -131,23 +131,23 @@ public class ShopManager : MonoBehaviour
         }
     }
     // Dumy For cash Increasing ----------------------------------------------
-    public void Cash(float value,bool text)
+    public void Cash(int value,bool text)
     {
-        PlayerPrefs.SetFloat("Cash", PlayerPrefs.GetFloat("Cash") + value);
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + value);
         if (text)
         { 
-        UIManager.Instance.Cash_text.text = ((int)PlayerPrefs.GetFloat("Cash")).ToString();
+        UIManager.Instance.Cash_text.text = PlayerPrefs.GetInt("Cash").ToString();
         }
     }  
     public void WolletCash(int value)
     {
-        PlayerPrefs.SetFloat("Cash", PlayerPrefs.GetFloat("Cash") + value);
-        UIManager.Instance.Cash_text.text = PlayerPrefs.GetFloat("Cash").ToString();
+        PlayerPrefs.SetInt("Cash", PlayerPrefs.GetInt("Cash") + value);
+        UIManager.Instance.Cash_text.text = PlayerPrefs.GetInt("Cash").ToString();
     }
     public void Update_Cash(int value)
     {
-        PlayerPrefs.SetFloat("Cash",PlayerPrefs.GetFloat("Cash")-value);
-        UIManager.Instance.Cash_text.text = PlayerPrefs.GetFloat("Cash").ToString();
+        PlayerPrefs.SetInt("Cash",PlayerPrefs.GetInt("Cash")-value);
+        UIManager.Instance.Cash_text.text = PlayerPrefs.GetInt("Cash").ToString();
     }
 }
 

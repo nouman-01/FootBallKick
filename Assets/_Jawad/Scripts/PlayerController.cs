@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     public bool Isbonospuck = false;
     // Start is called before the first frame update
     //public Transform PuckParent,HockeyParent,HelmatParent,KitParent;
-    public GameObject Helmat, Kit;
-    public GameObject Hockey, Puck;
+    public GameObject[]  Kit;
+    public GameObject[] Hockey, Puck;
 
 
     public static PlayerController instance;
@@ -29,6 +29,14 @@ public class PlayerController : MonoBehaviour
     {
         animPlayer = GetComponent<Animator>();
         shopManager = ShopManager.instance;
+        int kitindex = PlayerPrefs.GetInt("Shirt");
+        Kit[PlayerPrefs.GetInt("Shirt")].SetActive(true);
+        Puck[PlayerPrefs.GetInt("Puck")].SetActive(true); /*= ShopManager.instance.puck_Mat[PlayerPrefs.GetInt("Puck")];*/
+        Hockey[PlayerPrefs.GetInt("Stick")].SetActive(true);
+
+        //Kit[/*PlayerPrefs.GetInt("Shirt")*/2].SetActive(true);
+
+
     }
 
     // Update is called once per frame
@@ -96,11 +104,28 @@ public class PlayerController : MonoBehaviour
         Camera.main.GetComponent<DOTweenAnimation>().DORestartById("FailTween");
         animPlayer.SetTrigger("Lose");
     }
-    public   void ShopObj()
+    public void ShopObj()
     {
-        Kit=     ShopManager.instance.Kit_Mat[PlayerPrefs.GetInt("Shirt")];
-        Helmat= ShopManager.instance.Helmet_Mat[PlayerPrefs.GetInt("Shirt")];
-        Hockey = ShopManager.instance.Hockey_Mat[PlayerPrefs.GetInt("Stick")];
-        Puck = ShopManager.instance.puck_Mat[PlayerPrefs.GetInt("Puck")];
+        foreach (var item in Kit)
+        {
+            item.SetActive(false);
+        }
+        foreach (var item in Hockey)
+        {
+            item.SetActive(false);
+        }
+        foreach (var item in Puck)
+        {
+            item.SetActive(false);
+        }
+        // Kit[PlayerPrefs.GetInt("Shirt")].SetActive(true);
+        Kit[PlayerPrefs.GetInt("Shirt")].SetActive(true);
+
+        //Kit=     ShopManager.instance.Kit_Mat[PlayerPrefs.GetInt("Shirt")];
+        //Helmat= ShopManager.instance.Helmet_Mat[PlayerPrefs.GetInt("Shirt")];
+        //Hockey = ShopManager.instance.Hockey_Mat[PlayerPrefs.GetInt("Stick")];
+        Hockey[PlayerPrefs.GetInt("Stick")].SetActive(true); 
+
+        Puck[PlayerPrefs.GetInt("Puck")].SetActive(true); /*= ShopManager.instance.puck_Mat[PlayerPrefs.GetInt("Puck")];*/
     }
 }

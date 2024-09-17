@@ -22,25 +22,32 @@ public class UIManager : MonoBehaviour
     GameObject Shop_Objects;
     public Image FadeImge;
     public Transform Canvas,sublvl_indicator,Coins,CoinDstination;
-    public Text levelNumber,Cash_text,Lvltxt1, Lvltxt2,wolletText;
-    float wolletvalue = 5;
-    float increment=0;
+    public Text Cash_text,Lvltxt1, Lvltxt2,wolletText;
+    int wolletvalue = 5;
+    int increment=0;
     public GameObject loadingScreen;  // Reference to your loading screen UI
     public Image loadingSlider;
 
     public GameObject[] inappPannels;
     public GameObject[] RewardPannels;
 
+
+
     public GameObject sounds;
     public GameObject sound_on;
     public GameObject sound_offbtn;
 
+    public int temp;
+
+
     private void Awake()
     {
         Instance = this;
+
+
         if (PlayerPrefs.GetInt("OneTime") == 0)
         {
-            PlayerPrefs.SetFloat("Wolletcash", wolletvalue);
+            PlayerPrefs.SetInt("Wolletcash", wolletvalue);
             PlayerPrefs.SetInt("OneTime", 1);
         }
     }
@@ -67,7 +74,7 @@ public class UIManager : MonoBehaviour
             sound_on.SetActive(true);
 
         }
-        else  if (PlayerPrefs.GetInt("sound on") == 1)
+        else if (PlayerPrefs.GetInt("sound on") == 1)
         {
             sounds.SetActive(false);
             sound_offbtn.SetActive(true);
@@ -75,7 +82,13 @@ public class UIManager : MonoBehaviour
 
 
         }
-        Debug.LogError("Start");
+       
+        //temp = PlayerPrefs.GetInt("Cash");
+        //Cash_text.text = temp.ToString();
+        // Cash_text.text = wolletvalue.ToString();
+        //Debug.LogError("coins"+wolletvalue);
+
+        // Debug.LogError("Start");
 
     }
 
@@ -215,7 +228,8 @@ public class UIManager : MonoBehaviour
     public void onclickClosePannel()
     {
         wolletvalue = 5;
-        wolletText.text = wolletvalue.ToString();
+       wolletText.text = wolletvalue.ToString();
+
         DisableScreens();
         EnableScreen(LevelWinScreen);
         StartCoroutine(Generate_Coins());
@@ -250,6 +264,7 @@ public class UIManager : MonoBehaviour
 
     void revive_btn()
     {
+
         RevivePannel.SetActive(false);
         GameManager.instance.RestartGame();
     }
@@ -426,8 +441,8 @@ public class UIManager : MonoBehaviour
         if (PlayerPrefs.GetInt("Level") > 0)
         {
             increment =100;
-            PlayerPrefs.SetFloat("Wolletcash", PlayerPrefs.GetFloat("Wolletcash") + increment);
-            wolletvalue = PlayerPrefs.GetFloat("Wolletcash");
+            PlayerPrefs.SetInt("Wolletcash", PlayerPrefs.GetInt("Wolletcash") + increment);
+            wolletvalue = PlayerPrefs.GetInt("Wolletcash");
             Debug.LogError("coins1....." + increment);
 
         }
@@ -470,7 +485,6 @@ public class UIManager : MonoBehaviour
         StartCoroutine(Generate100_Coins());
     }
 
-    float temp;
     public void dailyReward()
     {
         StartCoroutine(Generate_Coins());
@@ -485,9 +499,9 @@ public class UIManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Level") > 0)
         {
-            increment = PlayerPrefs.GetFloat("Wolletcash") * 0.2f;
-            PlayerPrefs.SetFloat("Wolletcash", PlayerPrefs.GetFloat("Wolletcash") + increment);
-            wolletvalue = PlayerPrefs.GetFloat("Wolletcash");
+            increment = 5/*PlayerPrefs.GetInt("Wolletcash") * 1*/;
+            PlayerPrefs.SetInt("Wolletcash", PlayerPrefs.GetInt("Wolletcash") + increment);
+            wolletvalue = PlayerPrefs.GetInt("Wolletcash");
             Debug.LogError("coins1....." + increment);
 
         }
@@ -497,19 +511,20 @@ public class UIManager : MonoBehaviour
 
         DOTween.To(() => wolletvalue, x => wolletvalue = x, 0, 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
         {
-            wolletText.text = ((int)wolletvalue).ToString();
+            wolletText.text = wolletvalue.ToString();
 
         });
 
-        temp = PlayerPrefs.GetFloat("Cash");
-        ShopManager.instance.Cash(PlayerPrefs.GetFloat("Wolletcash"), false);
-        DOTween.To(() => temp, x => temp = x, temp + PlayerPrefs.GetFloat("Wolletcash"), 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
+        temp = PlayerPrefs.GetInt("Cash");
+        ShopManager.instance.Cash(PlayerPrefs.GetInt("Wolletcash"), false);
+        DOTween.To(() => temp, x => temp = x, temp + PlayerPrefs.GetInt("Wolletcash"), 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
         {
-            Debug.Log(PlayerPrefs.GetFloat("Wolletcash") + "Wollet Cash");
-            Cash_text.text = ((int)temp).ToString();
+            Debug.Log(PlayerPrefs.GetInt("Wolletcash") + "Wollet Cash");
+            Cash_text.text = temp.ToString();
             Debug.LogError("coins3....." + temp);
 
-            //wolletText.text = wolletvalue.ToString();
+           // wolletText.text = ((int)wolletvalue).ToString();
+
         });
 
         for (int i = 0; i < 20; i++)
@@ -537,14 +552,14 @@ public class UIManager : MonoBehaviour
     {
         if (PlayerPrefs.GetInt("Level") > 0)
         {
-            increment = PlayerPrefs.GetFloat("Wolletcash") +100f;
-            PlayerPrefs.SetFloat("Wolletcash", PlayerPrefs.GetFloat("Wolletcash") + increment);
-            wolletvalue = PlayerPrefs.GetFloat("Wolletcash");
+            increment = /*PlayerPrefs.GetInt("Wolletcash") +*/100;
+            PlayerPrefs.SetInt("Wolletcash", PlayerPrefs.GetInt("Wolletcash") + increment);
+            wolletvalue = PlayerPrefs.GetInt("Wolletcash");
             Debug.LogError("coins1....." + increment);
 
         }
 
-        Debug.LogError("coins2....." + wolletvalue);
+       // Debug.LogError("coins2....." + wolletvalue);
 
 
         DOTween.To(() => wolletvalue, x => wolletvalue = x, 0, 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
@@ -553,15 +568,16 @@ public class UIManager : MonoBehaviour
 
         });
 
-        temp = PlayerPrefs.GetFloat("Cash");
-        ShopManager.instance.Cash(PlayerPrefs.GetFloat("Wolletcash"), false);
-        DOTween.To(() => temp, x => temp = x, temp + PlayerPrefs.GetFloat("Wolletcash"), 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
+        temp = (int)PlayerPrefs.GetInt("Cash");
+        ShopManager.instance.Cash((int)PlayerPrefs.GetInt("Wolletcash"), false);
+        DOTween.To(() => temp, x => temp = x, temp + PlayerPrefs.GetInt("Wolletcash"), 1.5f).SetEase(Ease.Linear).OnUpdate(() =>
         {
-            Debug.Log(PlayerPrefs.GetFloat("Wolletcash") + "Wollet Cash");
+            Debug.Log(PlayerPrefs.GetInt("Wolletcash") + "Wollet Cash");
             Cash_text.text = ((int)temp).ToString();
             Debug.LogError("coins3....." + temp);
 
-            //wolletText.text = wolletvalue.ToString();
+         //   wolletText.text = ((int)wolletvalue).ToString();
+
         });
 
         for (int i = 0; i < 20; i++)
@@ -588,7 +604,7 @@ public class UIManager : MonoBehaviour
     {
         if (Positve)
         {
-            
+
             int indx = UnityEngine.Random.Range(0, Ending_ImgParent.transform.childCount - 1);
             Ending_ImgParent.transform.GetChild(indx).GetComponent<DOTweenAnimation>().DORestart();
         }
@@ -597,6 +613,10 @@ public class UIManager : MonoBehaviour
             //int indx = Random.Range(0, Sad_ImgParent.transform.childCount - 1);
             //Sad_ImgParent.transform.GetChild(indx).GetComponent<DOTweenAnimation>().DORestart();
         }
+    }
+    public void moreGames()
+    {
+        Application.OpenURL("https://play.google.com/store/apps/developer?id=Freento+Studio&hl=mn");
     }
     private void OnApplicationQuit()
     {
